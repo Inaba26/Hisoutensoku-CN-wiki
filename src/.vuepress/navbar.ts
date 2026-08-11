@@ -18,9 +18,14 @@ export default navbar([
     link: "/about/",
   },
   {
-    text: "新手上路",
+    text: "新手上路 联机教程",
     icon: "book",
     link: "/Beginners/BeforePlaying.html",
+  },
+  {
+    text: "大厅常见问题",
+    icon: "book",
+    link: "/FAQ/Play/LobbyGuide.html",
   },
   {
     text: "启动器说明",
