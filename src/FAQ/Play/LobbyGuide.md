@@ -18,6 +18,7 @@ date: 2024-03-01
 
 - 视频教程 —— [**😎 新人指路 2024 五月 “新则” 使用向导**](https://www.bilibili.com/video/BV1gZ421s7yF/)
 
+- 文字教程 —— [对战前新人须知](/Beginners/BeforePlaying.html)
 :::
 
 
@@ -61,7 +62,7 @@ date: 2024-03-01
 
 
 
-@tab 情况三：弹窗“Failed to get public IP”
+<!-- @tab 情况三：弹窗“Failed to get public IP”
 
 ![图片加载中... =300x](https://bu.dusays.com/2024/01/21/65acb17f3c9bb.webp "Failed to get public IP")
 
@@ -80,32 +81,30 @@ date: 2024-03-01
 
 > 大厅获取用户IP的网址，默认用第一个 `http://www.sfml-dev.org/ip-provider.php` ，
 > 有问题了再用第二个 `https://api-ipv4.ip.sb/ip`
+ -->
 :::
 
-## 一进大厅就掉了
 
-![图片加载中... =400x](https://bu.dusays.com/2024/10/26/671caac7893bd.webp " ")
+## 大厅内的操作说明
 
-一般是因为你的机签名字有问题，不要使用默认的 profile1p 机签名字，改名然后重新进大厅
-
-- [**请查看新人需知，并修改名字**](/Beginners/BeforePlaying.html#%E5%BC%80%E5%A7%8B%E6%B8%B8%E6%88%8F%E5%89%8D-%E8%AE%BE%E7%BD%AE%E5%A5%BD%E4%BD%A0%E7%9A%84%E6%9C%BA%E7%AD%BE%E5%90%8D-profile-%E3%80%81%E9%94%AE%E4%BD%8D%E3%80%81%E5%8D%A1%E7%BB%84)
-
-
-## 大厅内的操作、发表情
+0.7.3.3 版本
 
 - 在电梯和机子前按 `键盘 Z` 交互
-- 按 `Esc` 退出大厅房间
 - 按住`键盘 A` 加左右方向可以疾跑  
+- 按 `Esc` 退出大厅房间
 - 进入电梯后可以扩大视野
 - 按住 `键盘 S` 和 `方向键`，可以自由移动镜头（自己角色不动），再同时按住 `键盘 A` 可以加快镜头的移动速度
-- 聊天框内输入 `/help` 查看全部命令列表 
-- 发表情是用`两个冒号中间夹着名字和数字`的格式，如 `:reimu1:` （见图1）
-- 大厅菜单，选择最后一项：统计，统计界面可以查看网络对战中（不管是否通过大厅，只要是网战就都会记录下来）自己的局数、胜率、卡片携带率、卡片使用率等数据
+- 按 `F1` 可以快捷发送表情
+- 按 `F2` 后，按`数字键 1-9` 可以快捷发送短语，可在 ini 内自定义短语
+- 按 `F3` 切换聊天框自动弹出状态，可选三种模式：所有人、仅对战对手、永不自动弹出。默认仅对战对手+公屏气泡
+- ini 内可以开关消息气泡，默认开
+- 对战时以及对战结束后，对手的消息高亮显示 5 分钟，默认紫色，ini 内可改高亮颜色
+- 大厅菜单最后一项的统计，可以查看网络对战中（不管是否通过大厅，只要是网战就都会记录下来）自己的局数、胜率、卡片携带率、卡片使用率等数据
 
-![图片加载中... =600x](https://bu.dusays.com/2024/01/21/65acb2edc1742.webp "图 1：表情文件在这里查看文件 `th123\Modules\SokuLobbiesMod\assets\emotes\list.json`")
+在这里点开大厅的 ini 配置文件  `th123/modules/SokuLobbiesMod/SokuLobbies.ini`
 
 
-## 全开档解锁
+<!-- ## 全开档解锁
 
 - **不想自己打成就解锁的话，可以手动使用全开档**
 
@@ -116,7 +115,7 @@ date: 2024-03-01
 ![图片加载中... =600x](https://bu.dusays.com/2024/05/05/66377cc681625.png "如图，先关掉游戏，手动删除原先的achievements.dat文件，然后把achievements_cheated.dat改名为achievements.dat，再打开游戏，即可解锁全开档")
 
 ![图片加载中... =300x](https://bu.dusays.com/2024/10/26/671c931693f9a.webp "**注意用全开档后就不能查看成就页面了**")
-
+ -->
 
 ## 修改聊天框热键
 默认是 `Enter 回车键` 打字和发送消息
@@ -157,44 +156,14 @@ AcceptHostlist=1
 :::
 
 
+<!-- ## 一进大厅就掉了
 
-## 大厅内自己显示为黑框黑块，菜单里点自定义人物自定义形象就崩溃
-::: info 解决办法
-看图中文件夹路径 `th123/modules/SokuLobbiesMod` 文件夹内，删除 `settings.dat` 文件
+![图片加载中... =400x](https://bu.dusays.com/2024/10/26/671caac7893bd.webp " ")
 
-或者运行 `[修复]【 重置 Mod 配置 】.bat`
+一般是因为你的机签名字有问题，不要使用默认的 profile1p 机签名字，改名然后重新进大厅
 
-![图片加载中... =500x](https://bu.dusays.com/2024/01/21/65acb47068f41.webp "删除 settings.dat 文件")
-
-:::
-
-## Network 弹窗报错 SokuLobbyError: Cannot load stats.dat Invalid magic
-
-::: info  解决办法
-
-看图中文件夹路径，点到 `th123/modules/SokuLobbiesMod` 文件夹内，
-删除 `stats.dat`文件，然后将你的 `stats.dat.backup` 备份文件给改名为 `stats.dat`，实现备份恢复
-
-![图片加载中... =600x](https://bu.dusays.com/2024/05/25/66515b2e32b6e.png " ")
-
-:::
-
-## 大厅内人多的时候画面就变得很卡
-这是目前大厅 mod 的 bug，打开 SokuLauncher 启动器，下载并开启 SokuDirectXOptimizations mod 后可以避免游戏变得迟缓，而只有画面抽帧
-::: tip 解决方法
-**画面变得卡顿后，退出大厅进入练习模式或者顶着卡顿加入一次网络对战，选完人进入对局后，就不会再卡了，游戏结束返回大厅也不会再卡了**
-:::
-
-
-
-## 游戏ESC返回主菜单时卡住
-
-游戏ESC返回主菜单时卡住为正常，挂在后台稍微等一会儿即可
-
-::: caution 
-不要强行关闭游戏，否则可能会造成 stats.dat 等数据损坏之后弹窗报错 SokuLobbyError: Cannot load stats.dat Invalid magic
-:::
-
+- [**请查看新人需知，并修改名字**](/Beginners/BeforePlaying.html#%E5%BC%80%E5%A7%8B%E6%B8%B8%E6%88%8F%E5%89%8D-%E8%AE%BE%E7%BD%AE%E5%A5%BD%E4%BD%A0%E7%9A%84%E6%9C%BA%E7%AD%BE%E5%90%8D-profile-%E3%80%81%E9%94%AE%E4%BD%8D%E3%80%81%E5%8D%A1%E7%BB%84)
+ -->
 
 ## 在大厅内弹出 Internal Error EOFException WSAGetLastError 10054
 
@@ -215,14 +184,6 @@ AcceptHostlist=1
 
 这是因为大厅主服务器炸了，过一段时间会自动恢复
 
-
-
-## 进入大厅界面后房间列表全黄，加载很慢
-
-这是因为有无效房间卡在列表里导致的bug，显示黄色的等待，但其实房间本身是可以盲进的
-
-::: tip 解决办法：<br>直接进入菜单，按上键定位最后一个房间，然后依次往上一个一个进，直到进到有人的正确房间；或者等一会儿让他加载房间
-:::
 
 
 
@@ -281,10 +242,6 @@ AcceptHostlist=1
 
 ::::
 
-## 一直在弹成就
-::: tip 解决办法：关掉游戏重开就行了，不要傻等
-:::
-
 ## 建主或进别人时提示端口冲突，我进去大厅发现已经有一个我，然后自己的ID后面多了个0
 
 这是因为你之前的则刚好卡死崩溃黑屏等，此时关掉窗口并不会实际关闭游戏，游戏进程th123.exe依然残留在电脑后台
@@ -295,15 +252,6 @@ AcceptHostlist=1
 
 :::
 
-
-## 选人界面这个对话框怎么关掉
-
-![图片加载中... =300x](https://bu.dusays.com/2024/01/21/65acf01c835a3.webp " ")
-
-
-选人界面会显示不会消失，不用理它，选完地图进入对战就会消失了
-
-如果会键入打字，那就按回车把字输出就行了，然后就不会再打字了
 
 
 
